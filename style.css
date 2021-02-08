@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@font-face{
+  font-family:"AS";
+  src:url("fonts/AnticSlab.eot");
+  src:url("fonts/AnticSlab.eot?#iefix") format("embedded-opentype"),
+      url("fonts/AnticSlab.woff") format("woff"),
+      url("fonts/AnticSlab.ttf") format("truetype");
+}
+@font-face{
+  font-family:"SF";
+  src:url("fonts/Sunflower.eot");
+  src:url("fonts/Sunflower.eot?#iefix") format("embedded-opentype"),
+      url("fonts/Sunflower.woff") format("woff"),
+      url("fonts/Sunflower.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: "AS", "SF";
+}
+.head_achor {
+  text-decoration: none;
+  color: black;
+}
+.head_achor:hover {
+  text-decoration: underline;
+  color: navy;
+}
+nav {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-flow: row wrap;
+}
+#logo {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+nav > * {
+  border-right: 2px dotted black;
+  margin: 10px 0px 10px 0px;
+  padding: 0px 10px 0px 10px;
+  list-style-type: none;
+  flex-grow: 1;
+}
+.route {
+  color: red;
+}
+footer {
+  border-top: 2px solid black;
+}
