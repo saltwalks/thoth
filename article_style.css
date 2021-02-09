@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "AS", "SF";
+}
+header {
+  border: 2px solid black;
+  height: 94px;
+}
+header * {
+  color: black;
+  text-decoration: none;
+  font-size: 50px;
+  display: inline-block;
+}
+header>div *:hover {
+  text-decoration: underline;
+}
+header>div {
+  padding: 15px;
+}
+header>h1 {
+  border-left: 2px solid black;
+  padding: 15px;
+}
+main {
+  padding-left: 130px;
+}
+h2 {
+  margin-left: -25px;
+}
+h2 {
+  font-size: 100px;
+}
+ol>li {
+  font-size: 50px;
+}
+ul>li {
+  font-size: 25px;
+}
+footer {
+  height: 20px;
+  border-top: 2px solid black;
+  text-align: center;
+}
