@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../font.css">
+    <link rel="stylesheet" href="../../article_style.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><a href="./index.html">Thoth</a></div>
+    </header>
+    <nav>
+      <h1>다중자료형</h1>
+    </nav>
+    <main>
+      <h2>리스트</h2>
+      <ol>
+        <li>리스트 요소 추가 = append(<strong>요소 하나</strong>), +=[리스트], extend(<strong>리스트</strong>), insert(<strong>인덱스, 요소</strong>)</li>
+        <ul>
+          <li>+=와 extend는 기능이 같다</li>
+        </ul>
+        <li>리스트 요소 삭제 = del 리스트이름[<strong>인덱스</strong>], remove(<strong>요소 하나</strong>), pop() : <strong>맨 마지막 팦</strong></li>
+      </ol>
+      <h2>튜플</h2>
+      <ol>
+        <li>튜플은 기본적으로 선언 후에는 변경이 불가능하다</li>
+        <ul>
+          <li>+=연산자를 통해 요소 추가가 되는것처럼 보이지만 실제로는 추가가 아닌 추가된 튜플을 새로 만드는 거임(주소값이 다르다)</li>
+        </ul>
+        <li><strong>튜플의 요소가 한개여도 콤마(,)를 찍어준다</strong> – (1,)처럼</li>
+      </ol>
+      <h2>딕셔너리</h2>
+      <ol>
+        <li>기본구조 : {키1:값1, 키2:값2 ... }</li>
+        <li>딕셔너리의 리스트화</li>
+        <ul>
+          <li>Keys() : 딕셔너리의 키들만 모아 리스트로 만듦</li>
+          <li>Values() : 마찬가지임</li>
+          <li>Items() : 마찬가지임. 다만 키-밸류 쌍을 튜플로 묶어 리스트를 만듦</li>
+          <li>!!주의 : 이 값들을 이용해 불러낸 값들은 리스트 객체로 나오지 않는다. List() 생성자를 이용해 리스트로 바꿔줘야만 리스트가 되며 그 전까지는 <strong>dict_라는 값이 붙은 객체로 나오게 됨</strong>. 얘네들은 iteration까진 되지만 추가, 삭제 등의 변경이나 여타 리스트의 연산들은 안된다는 점을 주의할것</li>
+        </ul>
+        <li>딕셔너리 get() 함수 : 딕셔너리[키] 연산과 동일하지만 존재하지 않는 키의 경우 <strong>get()함수는 오류가 아닌 none</strong> 값을 출력한다는 차이가 있다</li>
+      </ol>
+      <h2>집합</h2>
+      <ol>
+        <li>이 두가지 특징만 기억해라</li>
+        <ul>
+          <li><strong>집합은 키 없는 딕셔너리</strong>와 같다. 키도 없고 인덱스도 없음. 즉, <strong>집합의 요소들에 개별적으로 접근할 수 있는 방법이 없다</strong> = 접근은 생성자를 이용해 리스트 등으로 바꾼 담에야 가능.</li>
+          <li>중복된 요소들을 가질 수 없다 : 리스트, 튜플 등을 집합으로 변경하면 중복된 값이 다 사라진다 = 중복제거 알고리즘으로 이용 가능</li>
+        </ul>
+        <li>수학에서의 집합과 동일한 특성을 가진다. 따라서 수학에서의 집합연산도 가능하다</li>
+        <ul>
+          <li>교집합 : &, intersection()</li>
+          <li>합집합 : |, union()</li>
+          <li>차집합 : -, difference()</li>
+        </ul>
+      </ol>
+      <h2>괄호 정리!</h2>
+      <ol>
+        <li>문자열 : ‘#’, “#", ‘’’#‘’’, “””#“””</li>
+        <li>리스트 : [ ]</li>
+        <li>튜플 : ( ), 없음(콤마만)</li>
+        <li>딕셔너리 : { }</li>
+        <li>집합 : { } – 중괄호 안에 요소들이 키값이 없으면 집합인거</li>
+      </ol>
+      <h2>자료형(객체)복사</h2>
+      <ol>
+        <li>'=' 연산은 객체 복사가 아닌 참조할당이다(메모리를 아끼기 위해서인듯)</li>
+        <li><strong>객체 복사를 위해서는 copy()나 생성자를 이용</strong>하자</li>
+        <ul>
+          <li>단, 앞에서 말한거처럼 튜플은 copy()나 생성자를 통해 만들어도 어차피 같은놈이고 변경도 안되므로 <strong>튜플은 메모리를 하나만 할당</strong>한다</li>
+          <li>copy()함수는 copy모듈을 import해야 한다</li>
+        </ul>
+        <li>다중구조에서의 복사 : deepcopy()</li>
+        <ul>
+          <li>리스트 안에 리스트가 있거나 뭐 튜플이 있거나 하는 다중 구조의 경우에는 copy()를 써도 안에 있는 놈은 참조할당된다</li>
+          <li><strong>따라서 안에있는놈까지 복사하고싶은경우에는 deepcopy()를 써서 복사해야된다</strong></li>
+          <li>물론 이놈도 copy모듈을 import해야한다</li>
+        </ul>
+      </ol>
+      <h2>변수 여러개를 한번에 선언/초기화하고싶나?</h2>
+      <ol>
+        <li>리스트 이용하기 : [변수1, 변수2, ... ] = [값1, 값2, ... ]</li>
+        <li>튜플 이용하기 : 변수1, 변수2, ... = 값1, 값2, ...</li>
+        <li>물론 튜플에 괄호넣어도 된다 : (변수1, 변수2, ... ) = (값1, 값2, ... )</li>
+      </ol>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../font.css">
+    <link rel="stylesheet" href="../../article_style.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><a href="./index.html">Thoth</a></div>
+    </header>
+    <nav>
+      <h1>함수선언</h1>
+    </nav>
+    <main>
+      <h2>선언</h2>
+      <ol>
+        <li>기본구조 : <strong>def 함수명(매개변수1, 매개변수2, ... ):구현</strong></li>
+        <li>구현부분은 <strong>반드시 줄을 바꿔서 인덴테이션을 넣고 해야된다</strong></li>
+      </ol>
+      <h2>매개변수</h2>
+      <ol>
+        <li><strong>매개변수명 앞에 *를 붙이면 입력한 인자들을 모아 튜플로 만든다</strong></li>
+        <ul>
+          <li>매개변수명[인덱스]로 호출 가능</li>
+          <li>인자의 갯수를 모를때 활용하면 된다</li>
+          <li>뭐 비스무리한 자료형이 아닌 튜플로 나오므로 iterate사용할 수 있다 - for문에 쓸 수 있다 이말이야</li>
+          <li>*매개변수와 기본 매개변수를 전부 사용할 수 있다. 다만, 오해의 소지를 줄이기 위해 그냥 매개변수를 *매개변수의 앞에 두던가 인자를 입력할때 매개변수 이름=인자 기능으로 직접 넣어줘야한다</li>
+          <li>통상적으로 매개변수명으로 arg를 쓴다(argument의 줄임말)</li>
+        </ul>
+        <li>키워드 파라미터 : **를 붙이면 딕셔너리가 된다</li>
+        <ul>
+          <li>선언할때 <strong>함수명(**매개변수명)</strong> 이래 해놓고</li>
+          <li>함수 호출할때 <strong>함수명(인자1=값1, 인자2=값2, ... )</strong> 이렇게 호출하면</li>
+          <li><strong>매개변수 = {"인자1":값1, "인자2":값2, ... }</strong> 이래 변환되고 <strong>매개변수["인자"]</strong> 이렇게 사용하면 된다</li>
+          <li>입력한 인자가 문자열 형식으로 변환된다는거에 주의해라</li>
+          <li>통상적으로 매개변수명으로 kwarg를 쓴다(keyword argument의 줄임말)</li>
+        </ul>
+        <li>인자를 안받아도 되는 매개변수</li>
+        <ul>
+          <li><strong>함수선언시에 (매개변수 = 초깃값)</strong>이렇게 선언하면 함수 호출시에 인자를 안넣어줘도 된다</li>
+          <li>그럼 함수는 이 초깃값을 가지고 돌아가게 된다</li>
+          <li>하지만 초기값을 사용하지 않고 다른값을 넣어주고 싶으면 <strong>함수 호출시에 (매개변수 = 값)</strong>이렇게 넣어주면 된다</li>
+        </ul>
+      </ol>
+      <h2>리턴</h2>
+      <ol>
+        <li>튜플을 이용하면 리턴값을 여려개 보낼 수 있다</li>
+        <ul>
+          <li><strong>return 값1, 값2, ... </strong>일케 해주면 저 값들이 튜플로써 전달되게 된다 - 괄호없이 콤마만 쓰면 튜플이므로</li>
+          <li>실질적으로는 튜플 하나만 반환하는것이므로 오류가 나지 않는다</li>
+        </ul>
+        <li><strong>튜플변수 = 반환값</strong> 이렇게 받을수도 있지만 <strong>변수1, 변수2, ... = 반환값</strong> 이런식으로도 변수에 각각 받아줄 수 있다</li>
+      </ol>
+      <h2>람다</h2>
+      <ol>
+        <li>lambda를 이용하면 한줄로 함수를 선언/구현할 수 있다</li>
+        <ul>
+          <li>기본구조 : <strong>함수명 = lambda 매개변수1, 매개변수2, ... : 구현</strong></li>
+          <li>파이썬은 인덴트를 매우 중요하게 생각하므로 def를 사용하면 한줄로 끝낼 수 없다</li>
+          <li>한줄로 끝낼 수 있는 간단한 함수를 구현할때 사용하면된다</li>
+        </ul>
+      </ol>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>
