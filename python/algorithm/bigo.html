@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../font.css">
+    <link rel="stylesheet" href="../../article_style.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><a href="./index.html">Thoth</a></div>
+    </header>
+    <nav>
+      <h1>빅오, 시간복잡도</h1>
+    </nav>
+    <main>
+      <h2>점근적 실행 시간, 시간복잡도</h2>
+      <ol>
+        <li><strong>점근적 실행 시간 : 입력값의 갯수가 무한대를 항할 떄 함수의 실행시간 추이</strong></li>
+        <li>시간복잡도 : 어떤 알고리즘을 수행할 때 걸리는 시간을 설명하는 계산 복잡도</li>
+        <ul>
+          <li>어렵게 생각할 거 없다.<strong>점근적 실행 시간이랑 비슷한 개념이다</strong></li>
+        </ul>
+      </ol>
+      <h2><strong>빅 오 : 시간 복잡도를 표현하는 방식</strong></h2>
+      <ol>
+        <li>O(수식)로 나타내며 저 수식은 입력값의 갯수에 따라 걸리는 시간을 수식으로 표현한 것이다</li>
+        <ul>
+          <li>수식은 실제로 걸리는 시간에 대한 정확한 수식이 아닌 "적당히 정확한" 수식을 사용한다</li>
+          <li>예를들어 n개의 입력값에 대해 4n^2+2n+7의 시간이 걸린다면 여기서 최고차항 미만의 항들과 최고차항의 계수를 버리면 n^2가 될 것이다. 이 수식을 이용해 이 알고리즘의 시간 복잡도는 O(n^2)이다 라고 말 하는 것 이다</li>
+        </ul>
+        <li>O(상수) : 아무리 입력값이 많아도 일정한 시간이 걸린다. 아주 이상적인 알고리즘이지만 다만 상수가 ㅈㄴ 크다면 별 의미 없다</li>
+        <li>O(로그n) : 입력값에 따라서 시간이 변하지만 기울가 완만해지기 때문에 입력값의 갯수가 아무리 커도 시간이 드라마틱하게 변하지 않는다</li>
+        <li>O(n) : 입력값에 비례해서 시간이 오래걸린다. 선형시간 알고리즘이라고도 불리며</li>
+      </ol>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>
