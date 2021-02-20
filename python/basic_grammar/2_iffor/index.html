@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">데크</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>생성자</h2>
+        <ul class="command">
+          <li>a = collections.deque()</li>
+          <li>a = collections.deque(iterable)</li>
+        </ul>
+        <ul class="describe">
+          <li>인자를 아무것도 넣지 않으면 빈 데크가 만들어진다</li>
+          <li>반복 가능한 객체를 넣으면 그 객체의 내용이 데크로 만들어진다</li>
+        </ul>
+        <ul class="tip">
+          <li>maxlen=숫자 : 생략가능한 매개변수로 maxlen이 있다. 이놈은 데크의 최대길이를 선언하는놈이며 데크가 찼을 경우에 새로 요소를 추가하면 왼쪽에서부터 차례로 지워진다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>요소 추가</h2>
+        <ul class="command">
+          <li>deq.append(object)</li>
+          <li>deq.appendleft(object)</li>
+        </ul>
+        <ul class="describe">
+          <li>append은 오른쪽에 요소 추가</li>
+          <li>appendleft은 왼쪽에 요소 추가</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>데크 확장</h2>
+        <ul class="command">
+          <li>deq.extend(iterable)</li>
+          <li>deq.extendleft(iterable)</li>
+        </ul>
+        <ul class="describe">
+          <li>extend는 오른쪽에 확장</li>
+          <li>extendleft는 왼쪽에 확장</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>요소 삭제</h2>
+        <ul class="command">
+          <li>deq.pop()</li>
+          <li>deq.popleft()</li>
+        </ul>
+        <ul class="describe">
+          <li>pop은 오른쪽에서 하나 꺼냄</li>
+          <li>popleft은 왼쪽에서 하나 꺼냄</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>인덱스 찾기</h2>
+        <ul class="command">
+          <li>deq.index(object)</li>
+        </ul>
+        <ul class="describe">
+          <li>object가 처음으로 등장하는 인덱스를 deq에서 찾아서 알려줌</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>회전하기</h2>
+        <ul class="command">
+          <li>deq.rotate(n=1)</li>
+          <li>deq.rotate(n=-1)</li>
+        </ul>
+        <ul class="describe">
+          <li>n=1 : 오른쪽으로 하나 회전. 즉, deq.appendleft(deq.pop())와 같음</li>
+          <li>n=-1 : 왼쪽으로 하나 회전. 즉, deq.append(deq.popleft())와 같음</li>
+          <li>숫자는 얼마큼 회전할지, 부호는 방향을 의미한다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>
