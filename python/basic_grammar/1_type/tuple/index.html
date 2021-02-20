@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">튜플</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>선언</h2>
+        <ul class="command">
+          <li>(1, 2, 3)</li>
+          <li>(1, )</li>
+          <li>1, 2, 3</li>
+        </ul>
+        <ul class="describe">
+          <li>튜플은 소괄호()로 선언하며 괄호가 없어도 튜플로 선언된다</li>
+        </ul>
+        <ul class="caution">
+          <li>튜플은 요소가 한개여도 콤마를 찍어줘야 한다</li>
+        </ul>
+        <ul class="tip">
+          <li>"a, b = 1, 2" : 여러개의 변수를 선언 및 초기화할때 이렇게 튜플을 이용해주면 편하다</li>
+          <li>"a, b = b, a" : 변수 두개의 값을 맞교환할때 제3의 변수를 안쓰고 이렇게 단순하게 하는것이 가능하다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>생성자</h2>
+        <ul class="command">
+          <li>a = tuple()</li>
+          <li>a = tuple(iterable)</li>
+        </ul>
+        <ul class="describe">
+          <li>인자를 안주면 빈 튜플을 반환하고</li>
+          <li>반복 가능한 객체를 인자로 주면 해당 객체의 내용을 튜플로 변환하여 반환한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>인덱스 접근</h2>
+        <ul class="command">
+          <li>tpl[int]</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>덧셈</h2>
+        <ul class="command">
+          <li>(1, 2, 3) + (4, 5, 6)</li>
+        </ul>
+        <ul class="describe">
+          <li>결과는 (1, 2, 3, 4, 5, 6)이다</li>
+        </ul>
+        <ul class="caution">
+          <li>튜플은 불변객체이기 때문에 덧셈의 결과는 새로운 객체로 생성된다.</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>슬라이싱</h2>
+        <ul class="command">
+          <li>tpl[1:20:2]</li>
+        </ul>
+        <ul class="describe">
+          <li>인덱스 1부터 19까지 인덱스 2씩 증가하며 슬라이싱</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>곱셈</h2>
+        <ul class="command">
+          <li>(1, 2, 3)*3</li>
+        </ul>
+        <ul class="describe">
+          <li>결과는 (1, 2, 3, 1, 2, 3, 1, 2, 3)이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>길이구하기</h2>
+        <ul class="command">
+          <li>len(tpl)</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

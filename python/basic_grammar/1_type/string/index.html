@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">문자열</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h1>표현법</h1>
+        <ul class="command">
+          <li>'str'</li>
+          <li>"str"</li>
+          <li>'''str'''</li>
+          <li>"""str"""</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>줄바꿈</h1>
+        <ul class="command">
+          <li>'\n'</li>
+          <li>'''엔터'''</li>
+          <li>"""엔터"""</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>인덱스참조</h1>
+        <ul class="command">
+          <li>str[int]</li>
+        </ul>
+        <ul class="describe">
+          <li>음수를 넣으면 뒤에서부터 온다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>슬라이싱</h1>
+        <ul class="command">
+          <li>str[a:b:c]</li>
+        </ul>
+        <ul class="describe">
+          <li>a = 첫인덱스 : 생략하면 0</li>
+          <li>b = 끝인덱스 : 생략하면 문자열 맨끝</li>
+          <li>c = 인덱스이동 : 디폴트는 1, 0주면 에러남, 음수는 역이동(문자열 뒤집기에 이용)</li>
+        </ul>
+        <ul class="tip">
+          <li>파이썬의 문자열 슬라이싱은 연산속도가 아주 빠르다. 문자열을 처리할 일이 있으면 리스트로 바꾸거나 하지 말고 문자열 자체에서 슬라이싱 등을 이용하는게 좋다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>퍼센트 포매팅</h1>
+        <ul class="command">
+          <li>("%10s" % 123)</li>
+          <li>("%0.2f" % 1.23456)</li>
+        </ul>
+        <ul class="describe">
+          <li>10 : 포매팅되는 부분 총길이가 10이 되고 123은 오른쪽 정렬 후 남는부분은 스페이스바로 채움. 숫자가 음수이면 왼쪽정렬. 이딴거 필요없으면 숫자는 안써도됨</li>
+          <li>s : 포매팅되는놈의 자료형. s는 문자열이기때문에 아무거나 넣어도 된다</li>
+          <li>% 123 : 123을 포매팅시키겟다는 뜻</li>
+          <li>0.2 : 소숫점 뒤 2자리까지 표시하겠다는 뜻</li>
+          <li>f : 소숫점 자리수를 지정할때는 f로 자료형을 지정해 줘야 한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>인덱스 포매팅</h1>
+        <ul class="command">
+          <li>"{0} {1} {2}".format(123, 456, 789)</li>
+          <li>"{a} {b} {c}".format(a = 1, b = 2, c = 3)</li>
+        </ul>
+        <ul class="describe">
+          <li>{}안의 숫자가 인덱스, 뒤에 123 456 789가 인덱스 순대로 들어감</li>
+          <li>문자 인덱스를 사용할때는 format()안에 직접 명기해야함</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>변수 포매팅</h1>
+        <ul class="command">
+          <li>f."{변수1} {변수2}"</li>
+        </ul>
+        <ul class="describe">
+          <li>변수를 직접 안에 포매팅하고싶을때</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>콤마/스페이스 포매팅</h2>
+        <ul class="command">
+          <li>"abc", "def"</li>
+          <li>"abc" "def"</li>
+        </ul>
+        <ul class="describe">
+          <li>콤마 : 띄어쓰기되어 연결됨 = "abc def"</li>
+          <li>스페이스 : 그냥 연결됨 = "abcdef"</li>
+        </ul>
+        <ul class="tip">
+          <li>얘네들이 직관적으로 보기 편해 보통 print()함수쓸때 자주 사용한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>변형해서 포매팅하기</h1>
+        <ul class="command">
+          <li>"{a:#^10}".format(a = 123)</li>
+          <li>f."{a:#^10}"</li>
+          <li>"{a:0.2f}".format(a = 1.234)</li>
+          <li>f."{a:0.2f}"</li>
+        </ul>
+        <ul class="describe">
+          <li>a : format에서는 인덱스(숫자가능), f에서는 변수명</li>
+          <li># : 총 길이중 포매팅하고 남은 공백을 #로 채운다는 뜻</li>
+          <li>^ : 포매팅되는 123이 가운데 정렬된다는 뜻. >는 오른쪽, <는 왼쪽 정렬이다</li>
+          <li>10 : 총 길이가 10이라는 뜻.</li>
+          <li>0.2 : 소숫점 뒤 2자리까지만 표시</li>
+          <li>f : 실수형. 소숫점 자리수 표현시에는 f반드시 써줘야된디</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>문자 개수 세기</h1>
+        <ul class="command">
+          <li>a.count('b')</li>
+        </ul>
+        <ul class="describe">
+          <li>'b'의 갯수를 a에서 세어서 알려줌</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>문자의 최소인덱스 찾기</h1>
+        <ul class="command">
+          <li>a.find('b')</li>
+          <li>a.index('b')</li>
+        </ul>
+        <ul class="describe">
+          <li>문자열a에서 'b'가 나온 첫 인덱스를 반환한다</li>
+          <li>find함수는 문자열이 없을때 -1반환하고 index는 오류를 발생시킨다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>문자 사이사이에 원하는 문자 넣기</h1>
+        <ul class="command">
+          <li>'#'.join("abcd")</li>
+        </ul>
+        <ul class="describe">
+          <li>결과는 a#b#c#d이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>대문자화</h1>
+        <ul class="command">
+          <li>a.upper()</li>
+        </ul>
+        <ul class="describe">
+          <li>문자열a가 전부 대문자로 바뀐다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>소문자화</h1>
+        <ul class="command">
+          <li>a.lower()</li>
+        </ul>
+        <ul>
+          <li class="describe">문자열a가 전부 소문자로 바뀐다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>공백지우기</h1>
+        <ul class="command">
+          <li>a.lstrip()</li>
+          <li>a.rstrip()</li>
+          <li>a.strip()</li>
+        </ul>
+        <ul class="describe">
+          <li>lstrip() : 문자열a의 왼쪽 공백이 전부 사라진다</li>
+          <li>rstrip() : 문자열a의 오른쪽 여백이 전부 사라진다</li>
+          <li>strip() : 문자열a의 양쪽 여백이 전부 사라진다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>문자열 바꾸기</h1>
+        <ul class="command">
+          <li>a.replace("이걸로", "이것을")</li>
+        </ul>
+        <ul class="describe">
+          <li>문자열 a의 뒤엣놈을 앞에놈으로 바꾼다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h1>문자열 리스트화</h1>
+        <ul class="command">
+          <li>a.split("기준")</li>
+        </ul>
+        <ul class="describe">
+          <li>문자열을 "기준"으로 나눠서 리스트로 반환한다</li>
+          <li>"기준"을 안쓰면 스페이스바를 기준으로 나눈다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@font-face{
+  font-family:"AS";
+  src:url("fonts/AnticSlab.eot");
+  src:url("fonts/AnticSlab.eot?#iefix") format("embedded-opentype"),
+      url("fonts/AnticSlab.woff") format("woff"),
+      url("fonts/AnticSlab.ttf") format("truetype");
+}
+@font-face{
+  font-family:"SF";
+  src:url("fonts/Sunflower.eot");
+  src:url("fonts/Sunflower.eot?#iefix") format("embedded-opentype"),
+      url("fonts/Sunflower.woff") format("woff"),
+      url("fonts/Sunflower.ttf") format("truetype");
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">집합</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>선언</h2>
+        <ul class="command">
+          <li>a = {1, 2, 3, 4}</li>
+        </ul>
+        <ul class="describe">
+          <li>키:벨류 쌍이 아닌 요소만 중괄호에 묶으면 집합이 된다</li>
+        </ul>
+        <ul class="caution">
+          <li>집합의 요소도 불변객체여야 한다. 리스트를 요소로 가질 수 없다 이말이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>생성자</h2>
+        <ul class="command">
+          <li>a = set()</li>
+          <li>a = set(iterable)</li>
+        </ul>
+        <ul class="describe">
+          <li>인자를 안넣으면 빈 집합이 만들어진다</li>
+          <li>반복가능한 객체를 넣으면 그 객체의 내용이 집합화되어 반환된다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>교집합</h2>
+        <ul class="command">
+          <li>a & b</li>
+          <li>a.intersection(b)</li>
+        </ul>
+        <ul class="describe">
+          <li>두 잡합의 교집합을 구하는 연산이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>합집합</h2>
+        <ul class="command">
+          <li>a | b</li>
+          <li>a.union(b)</li>
+        </ul>
+        <ul class="describe">
+          <li>두 집합의 합집합을 구하는 연산이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>차집합</h2>
+        <ul class="command">
+          <li>a - b</li>
+          <li>a.difference(b)</li>
+        </ul>
+        <ul class="describe">
+          <li>두 집합의 차집합을 구하는 연산이다</li>
+        </ul>
+        <ul class="caution">
+          <li>교집합과 합집합과는 다르게 차집합은 순서에 신경써야된다(a - b, b - a는 다르다)</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

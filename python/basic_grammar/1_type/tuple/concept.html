@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">튜플</div>
+    </header>
+    <nav>
+      <div><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div id="selected"><div class="hov_box"><a href="./ccept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="concept">
+        <h2>튜플은 리스트의 불변객체버전이다</h2>
+        <ul>
+          <li>선언 이후에는 요소 변경 및 삭제가 안된다 : a[0] = 2 나 del a[0]등의 연산은 안된다 이말이다</li>
+          <li>어차피 불변객체이므로 참조복사밖에 안된다 : =연산을 하든 copy()를 쓰든 tuple()로 새로 만들든 내용이 같기때문에 참조복사밖에 안된다.</li>
+          <li>+나 +=연산은 요소 추가를 하는거같지만 사실 새로 만드는거다 : 리스틔의 경우에는 +, +=연산을 해도 주소값이 바뀌지 않지만 튜플은 새로 객체를 하나 반들어서 반환하기 때문에 주소값이 달라진다.</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

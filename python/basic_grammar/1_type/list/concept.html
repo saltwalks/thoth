@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">리스트</div>
+    </header>
+    <nav>
+      <div><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div id="selected"><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+        <article class="concept">
+          <h2>파이썬의 리스트는 다른 리스트들과는 좀 다르다</h2>
+          <ul>
+            <li>c나 자바의 경우에는 리스트에 요소로 들어갈 자료형의 정수배를 하여 리스트의 메모리를 할당한다</li>
+            <li>이 경우에는 연속된 메모리 공간에 인덱스 순서대로 리스트의 요소가 저장되므로 인덱스를 지정하면 간단한 연산만으로 메모리 주소를 알 수 있어 매우 빠르다</li>
+            <li>하지만 이 경우에는 리스트에 같은 자료형의 요소만 저장할 수 있고 선언된 리스트의 크기를 넘어서면 에러가 발생하는 등 불편한 점이 있다</li>
+            <li>하지만 파이썬은 속도를 양보하고 편의성을 가져왔다. 즉, 파이썬의 경우 연속된 메모리 공간에 리스트의 요소를 저장하지 않는다</li>
+            <li>파이썬에서는 요소들의 주소를 하나의 배열로 관리하는 형식을 취하며, 요소가 추가되면 리스트의 다음 공간에 추가하는 방식이 아닌 추가된 요소의 주소를 주소배열에 넣어주는 방식이다</li>
+            <li>이 방식은 새로 요소가 추가되면 요소를 메모리 어딘가에 할당하고 이것의 주소를 주소배열에 연결해주고, 요소가 삭제되면 주소배열과 요소와의 연결을 끊어주는 방식으로 요소 추가와 삭제가 이루어진다</li>
+            <li>이 방식의 장점은 기술한대로 편리함에 있다. 실제로 요소들이 차지하는 메모리 공간은 단순한 특정 자료형의 정수배가 아니기 떄문에, <strong>리스트에 다양한 자료형을 추가해도 문제가 되지 않는다</strong></li>
+            <li>또한 리스트의 크기가 제한적이지 않으며 언제든 <strong>리스트의 크기를 늘리거나 줄일 수 있다</strong>는 장점이 있다</li>
+            <li>하지만 <strong>단점은 기술한 대로 속도</strong>이다. 주소배열이 저장하고 있는 주소들은 반드시 인덱스 순서대로라고 할 수 없다. 요소가 추가되면 주소배열의 빈공간에 그냥 넣어주고 삭제되면 그 요소가 차지하던 주소배열의 자리를 그냥 비워주면 되기 때문이다</li>
+            <li>따라서 간단한 인덱스를 통한 값 조회의 경우에도 모든 주소배열의 주소로 들어가 값과 데이터타입, 요소들이 저장하고 있는 인덱스 값을 비교해야 되므로 단순한 연산으로 끝나지 않게 된다</li>
+          </ul>
+        </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

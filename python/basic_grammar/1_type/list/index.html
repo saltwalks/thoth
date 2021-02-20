@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../../css/font.css">
+    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">리스트</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>생성자</h2>
+        <ul class="command">
+          <li>a = list()</li>
+          <li>a = list(iterable)</li>
+        </ul>
+        <ul class="describe">
+          <li>인자를 아무것도 안주면 빈 리스트를 생성해서 반환한다</li>
+          <li>반복가능한 객체를 인자로 주면 그 객체의 내용을 리스트화해서 반환한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>요소 추가</h2>
+        <ul class="command">
+          <li>a.append(b)</li>
+          <li>a += [b]</li>
+          <li>a.extend([b])</li>
+          <li>a.insert(i, b)</li>
+        </ul>
+        <ul class="describe">
+          <li>리스트 a의 맨 뒤에 요소 b를 추가하거나 인덱스 i에 요소 b를 추가하는 메소드들</li>
+          <li>+=연산이랑 extend()는 같은 기능을 한다</li>
+        </ul>
+        <ul class="caution">
+          <li>이미 선언된 리스트에만 요소 추가가 가능하다. [1, 2].append(3)같은 연산은 불가능하다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>요소 삭제</h2>
+        <ul class="command">
+          <li>del a[i]</li>
+          <li>a.remove(b)</li>
+          <li>a.pop()</li>
+          <li>a.pop(0)</li>
+        </ul>
+        <ul class="describe">
+          <li>del : 인덱스로 접근해 삭제</li>
+          <li>remove : 입력값과 같은 값을 가지는 첫 요소를 삭제</li>
+          <li>pop() : 맨 뒷 요소를 삭제</li>
+          <li>pop(0) : 맨 앞 요소를 삭제</li>
+        </ul>
+        <ul class="tip">
+          <li>pop()이 O(1)로 제일 빠르고 다른애들은 선형비교를 해야하기 때문에 O(n)이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>문자열로 만들기</h2>
+        <ul class="command">
+          <li>'a'.join(a)</li>
+        </ul>
+        <ul class="describe">
+          <li>리스트a의 요소 사이사이에 'a'를 넣어서 하나의 문자열로 만든다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>대소비교</h2>
+        <ul class="command">
+          <li>[1, 2] < [3, 4]</li>
+          <li>[3, 4] > [1, 2]</li>
+          <li>[1, 2] <= [3, 4]</li>
+          <li>[3, 4] >= [1, 2]</li>
+          <li>[1, 2] == [1, 2]</li>
+        </ul>
+        <ul class="describe">
+          <li>리스트도 문자열마냥 앞의 인덱스부터 차례대로 대소비교해 전체 리스트의 대소를 판별한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>리스트 반복</h2>
+        <ul class="command">
+          <li>[1, 2, 3]*3</li>
+        </ul>
+        <ul class="describe">
+          <li>결과는 [1, 2, 3, 1, 2, 3, 1, 2, 3]이다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>정렬</h2>
+        <ul class="command">
+          <li>a.sort()</li>
+          <li>sorted(a)</li>
+        </ul>
+        <ul class="describe">
+          <li>sort() : a를 내부적으로 정렬한다</li>
+          <li>sorted() : a를 정렬한 결과를 반환한다</li>
+        </ul>
+        <ul class="caution">
+          <li>그냥 sort()메소드는 리턴값이 없다는것에 주의해야한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>순서 뒤집기</h2>
+        <ul class="command">
+          <li>a.reverse()</li>
+          <li>a[:]</li>
+        </ul>
+        <ul class="describe">
+          <li>리스트a의 순서를 뒤집은 결과를 반환한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>인덱스 반환</h2>
+        <ul class="command">
+          <li>a.index(123)</li>
+        </ul>
+        <ul class="describe">
+          <li>요소123의 위치를 a에서 찾아서 반환한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>요소 갯수 세기</h2>
+        <ul class="command">
+          <li>a.count(123)</li>
+        </ul>
+        <ul class="describe">
+          <li>요소123의 갯수를 a에서 세어서 반환한다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>
