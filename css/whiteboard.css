@@ -138,6 +138,10 @@ article ul {
   left: 45px;
   width: calc(100% - 45px);
 }
+.concept .example {
+  list-style: none;
+  background: #ECFFDC;
+}
 .tip {background: #FFFF8F;}
 /* ------------------------------------------------------------------------------------------------ */
 footer {

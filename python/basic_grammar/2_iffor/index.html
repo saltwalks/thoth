@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>article | Thoth</title>
-    <link rel="stylesheet" href="../../../../css/font.css">
-    <link rel="stylesheet" href="../../../../css/whiteboard.css">
+    <link rel="stylesheet" href="../../../css/font.css">
+    <link rel="stylesheet" href="../../../css/whiteboard.css">
   </head>
   <body>
     <header>
         <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
-        <div id="title">데크</div>
+        <div id="title">반복/조건문</div>
     </header>
     <nav>
       <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
@@ -17,71 +17,72 @@
     </nav>
     <main>
       <article class="code">
-        <h2>생성자</h2>
+        <h2>기본구조</h2>
         <ul class="command">
-          <li>a = collections.deque()</li>
-          <li>a = collections.deque(iterable)</li>
+          <li>if 조건 :</li>
+          <li>elif 조건 :</li>
+          <li>else :</li>
         </ul>
-        <ul class="describe">
-          <li>인자를 아무것도 넣지 않으면 빈 데크가 만들어진다</li>
-          <li>반복 가능한 객체를 넣으면 그 객체의 내용이 데크로 만들어진다</li>
+        <ul class="caution">
+          <li>else if 가 아니고 elif이다</li>
+          <li>: 이후에 줄바꿈 및 인덴테이션 꼭해야된다</li>
         </ul>
         <ul class="tip">
-          <li>maxlen=숫자 : 생략가능한 매개변수로 maxlen이 있다. 이놈은 데크의 최대길이를 선언하는놈이며 데크가 찼을 경우에 새로 요소를 추가하면 왼쪽에서부터 차례로 지워진다</li>
+          <li>해당조건에 암것도 안하고싶으면 pass 를 쓰면 된다</li>
         </ul>
       </article>
       <article class="code">
-        <h2>요소 추가</h2>
+        <h2>조건부 표현식</h2>
         <ul class="command">
-          <li>deq.append(object)</li>
-          <li>deq.appendleft(object)</li>
+          <li>a = 3 if 조건 else 4</li>
         </ul>
         <ul class="describe">
-          <li>append은 오른쪽에 요소 추가</li>
-          <li>appendleft은 왼쪽에 요소 추가</li>
+          <li>조건이 참이면 변수 a에 3을 넣고 거짓이면 4를 넣는다</li>
+        </ul>
+        <ul class="tip">
+          <li>=대신 +=, -=를 써도 된다</li>
         </ul>
       </article>
       <article class="code">
-        <h2>데크 확장</h2>
+        <h2>for문</h2>
         <ul class="command">
-          <li>deq.extend(iterable)</li>
-          <li>deq.extendleft(iterable)</li>
+          <li>for i in lst :</li>
+          <li>for a, b in tuplelist :</li>
         </ul>
         <ul class="describe">
-          <li>extend는 오른쪽에 확장</li>
-          <li>extendleft는 왼쪽에 확장</li>
+          <li>for문에서 in은 반복가능객체에서 요소를 하나씩 꺼내 앞의 변수에 넣어주는 연산이다</li>
+        </ul>
+        <ul class="tip">
+          <li>튜플 리스트의 경우 in앞을 튜플로 받아 여러개의 값을 하나의 for문으로 받아올 수 있다.</li>
         </ul>
       </article>
       <article class="code">
-        <h2>요소 삭제</h2>
+        <h2>연속된 자연수 for문으로 받아오기</h2>
         <ul class="command">
-          <li>deq.pop()</li>
-          <li>deq.popleft()</li>
+          <li>for i in range(1, 10) :</li>
         </ul>
         <ul class="describe">
-          <li>pop은 오른쪽에서 하나 꺼냄</li>
-          <li>popleft은 왼쪽에서 하나 꺼냄</li>
+          <li>range함수는 입력한 범위의 연속된 정수를 반복가능객체로 반환하는 함수이다. range(1, 10)은 1~9를 제공한다</li>
         </ul>
       </article>
       <article class="code">
-        <h2>인덱스 찾기</h2>
+        <h2>인덱스와 값 같이 for문으로 받아오기</h2>
         <ul class="command">
-          <li>deq.index(object)</li>
+          <li>for a, b in enumerate(lst) :</li>
         </ul>
         <ul class="describe">
-          <li>object가 처음으로 등장하는 인덱스를 deq에서 찾아서 알려줌</li>
+          <li>enumerte의 반환값을 튜플로 받아 리스트의 인덱스와 값을 같이 가져올 수도 있다</li>
         </ul>
       </article>
       <article class="code">
-        <h2>회전하기</h2>
+        <h2>리스트 컴프리헨션</h2>
         <ul class="command">
-          <li>deq.rotate(n=1)</li>
-          <li>deq.rotate(n=-1)</li>
+          <li>a = [i + 10 for i in lst]</li>
         </ul>
         <ul class="describe">
-          <li>n=1 : 오른쪽으로 하나 회전. 즉, deq.appendleft(deq.pop())와 같음</li>
-          <li>n=-1 : 왼쪽으로 하나 회전. 즉, deq.append(deq.popleft())와 같음</li>
-          <li>숫자는 얼마큼 회전할지, 부호는 방향을 의미한다</li>
+          <li>리스트 내에 for문을 넣어서 한줄로 for문과 리스트 생성을 끝낼 수 있다</li>
+          <li>for 앞에 수식, for 뒤에 변수, in 반복가능객체</li>
+          <li>위의 코드 결과는 리스트의 모든 요소에 10을 더해서 리스트 a의 구성요소로 만들어준다</li>
         </ul>
       </article>
     </main>
