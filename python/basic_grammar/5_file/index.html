@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../css/font.css">
+    <link rel="stylesheet" href="../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">파일입출력</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>파일 열기</h2>
+        <ul class="command">
+          <li>file_object = open("./file.txt", 'r')</li>
+          <li>file_object = open("./file.txt", 'w')</li>
+          <li>file_object = open("./file.txt", 'a')</li>
+        </ul>
+        <ul class="describe">
+          <li>open함수는 인자로 받은 경로에의 파일을 열어서 파일객체로 반환한다</li>
+          <li>'r'은 읽기 전용, 'w'는 파일 새로 만들기(+기존파일 덮어쓰기), 'a'는 파일 맨마지막줄에서부터 내용 추가하기</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>파일 닫기</h2>
+        <ul class="command">
+          <li>file_object.close()</li>
+        </ul>
+        <ul class="describe">
+          <li>메모리 최적화와 오류 방지를 위해 안쓰는 파일은 꼭 닫아줘야 한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>열고닫는걸 한번에</h2>
+        <ul class="command">
+          <li>with open("./file.txt", 'r') as file_object :</li>
+        </ul>
+        <ul class="describe">
+          <li>콜론(:)과 인덴트를 이용해 인덴트를 벗어나면 자동으로 파일이 닫히게 된다</li>
+        </ul>
+        <ul class="tip">
+          <li>파일을 잠깐 사용할때 사용하면 좋다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>파일 쓰기</h2>
+        <ul class="command">
+          <li>file_object.write("abcdef")</li>
+        </ul>
+        <ul class="describe">
+          <li>열어놓은 파일에 "abcdef"를 읽기방식에 의거하여 추가한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>파일 읽어오기</h2>
+        <ul class="command">
+          <li>file_object.readline()</li>
+          <li>file_object.readlines()</li>
+          <li>file_object.read()</li>
+        </ul>
+        <ul class="describe">
+          <li>readline() : 파일의 한 줄을 읽어온다. 호출할때마다 다음줄을 읽어오는 구조이다</li>
+          <li>readlines() : 파일의 한줄한줄을 리스트로 만들어 반환한다. 인덱스로 각 줄에 접근할 수 있다</li>
+          <li>read() : 파일 전체를 하나의 문자열로 반환한다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

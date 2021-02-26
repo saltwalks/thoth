@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../css/font.css">
+    <link rel="stylesheet" href="../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">내장함수</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>절대값</h2>
+        <ul class="command">
+          <li>abs(-3) == 3</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>반복가능한객체의 요소들이 전부 참인지</h2>
+        <ul class="command">
+          <li>all([1, 2, 3]) == True</li>
+          <li>all([0, 1, 2]) == False</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>반복가능한객체의 요소들이 하나라도 참인지</h2>
+        <ul class="command">
+          <li>any([0, 0, 3]) == True</li>
+          <li>any([0, 0, 0]) == False</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>아스키코드 -> 문자</h2>
+        <ul class="command">
+          <li>chr(97) == 'a'</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>(몫, 나머지)튜플 반환</h2>
+        <ul class="command">
+          <li>divmod(7, 3) == (2, 1)</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>실행가능한 문자열 실행하기</h2>
+        <ul class="command">
+          <li>eval("abs(-3)") == 3</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>함수객체를 받아 반복가능객체의 요소를 넣어 참인것만 걸러내기</h2>
+        <ul class="command">
+          <li>filter(#func, #iterable)</li>
+        </ul>
+        <ul class="caution">
+          <li>filter라는 반복 가능한 객체로 반환된다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>정수 -> 16진수</h2>
+        <ul class="command">
+          <li>hex(234) == 0xea</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>객체의 주소 알아내기</h2>
+        <ul class="command">
+          <li>id(object)</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>비정수의 정수화</h2>
+        <ul class="command">
+          <li>int('3') == 3</li>
+          <li>int(3.4) == 3</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>인스턴스관계 여부</h2>
+        <ul class="command">
+          <li>instance(object, Class)</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>반복가능객체의 요소들을 후처리해 새로 묶기</h2>
+        <ul class="command">
+          <li>map(#func, #iterable)</li>
+        </ul>
+        <ul class="caution">
+          <li>map이라는 반복가능객체로 반환된다</li>
+          <li>filter와의 차이점은 filter는 참인값만 걸러내지만 map은 거르지 않고 함수실행결과를 그대로 담는다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>정수 -> 8진수</h2>
+        <ul class="command">
+          <li>oct(34) == 0o42</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>문자 -> 아스키코드</h2>
+        <ul class="command">
+          <li>ord('a') == 97</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>x의 y승</h2>
+        <ul class="command">
+          <li>pow(x, y)</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>반올림</h2>
+        <ul class="command">
+          <li>round(3.5) == 4</li>
+          <li>round(1.2345, 2) == 1.23</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>비문자열의 문자열화</h2>
+        <ul class="command">
+          <li>str(3) == '3'</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>반복가능객체의 요소 합</h2>
+        <ul class="command">
+          <li>sum([1, 2, 3]) == 6</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>자료형 알고싶다</h2>
+        <ul class="command">
+          <li>type(object)</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>같은인덱스끼리 묶기</h2>
+        <ul class="command">
+          <li>list(zip([1, 2], [3, 4])) == [(1, 3), (2, 4)]</li>
+        </ul>
+        <ul class="tip">
+          <li>리스트 뿐 아니라 튜플, 문자열도 된다</li>
+        </ul>
+        <ul class="caution">
+          <li>당연히 두 인자의 길이는 같아야 한다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../css/font.css">
+    <link rel="stylesheet" href="../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">패키지</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+        <h2>패키지 만들기</h2>
+        <ul class="command">
+          <li>파일들을 폴더로 정리해준 다음 폴더마다 __init__.py 파일을 추가</li>
+          <li>폴더의 최상단에 main.py를 만들어주고 import로 필요한 모듈을 가져다쓰면 된다</li>
+        </ul>
+        <ul class="tip">
+          <li>__init__.py파일은 파이썬3부터는 필요없지만 호환성을 위해 넣어주자</li>
+          <li>main.py는 메인으로 프로그램이 돌아갈 파일이며 관례적으로 main이라고 이름지어준다</li>
+        </ul>
+        <ul class="caution">
+          <li>main.py파일이 최상단에 있지 않은 경우 다른 디렉토리의 모듈을 사용할때는 경로설정을 꼭 해줘야 한다</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>__init__.py파일의 __all__리스트</h2>
+        <ul class="command">
+          <li>__all__ = ["module1.py", "module2.py", ... ]</li>
+        </ul>
+        <ul class="describe">
+          <li>from-import *로 디렉토리의 모듈들을 한꺼번에 가져올 수 있는데 이때 __init__.py의 __all__리스트에 포함된 모듈만 가져온다</li>
+        </ul>
+        <ul class="caution">
+          <li>__all__을 작성하지 않고 from-import *을 하면 오류가 난다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>

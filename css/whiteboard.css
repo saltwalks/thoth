@@ -116,6 +116,12 @@ article ul {
 .code {
   flex: 0 0 300px;
 }
+.code .command li {
+  border-top: 2px dotted white;
+}
+.code .command li:first-child {
+  border: none;
+}
 .caution {
   background: #FA5F55;
 }
@@ -138,7 +144,7 @@ article ul {
   left: 45px;
   width: calc(100% - 45px);
 }
-.concept .example {
+.example {
   list-style: none;
   background: #ECFFDC;
 }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>article | Thoth</title>
+    <link rel="stylesheet" href="../../../css/font.css">
+    <link rel="stylesheet" href="../../../css/whiteboard.css">
+  </head>
+  <body>
+    <header>
+        <div id="logo"><div class="hov_box"><a href="../index.html">Thoth</a></div></div>
+        <div id="title">클래스</div>
+    </header>
+    <nav>
+      <div id="selected"><div class="hov_box"><a href="./index.html">Code</a></div></div>
+      <div><div class="hov_box"><a href="./concept.html">Concept</a></div></div>
+    </nav>
+    <main>
+      <article class="code">
+      <h2>선언</h2>
+      <ul class="command">
+        <li>class Class_name(Parent_class) :</li>
+      </ul>
+      <ul class="describe">
+        <li>괄호 안에 상속받을 부모 클래스 이름을 적는다. 상속받을 클래스가 없으면 안적어도 된다</li>
+      </ul>
+      <ul class="caution">
+        <li>괄호안에 부모클래스가 들어간다는 것에 유의할 것</li>
+      </ul>
+      </article>
+      <article class="code">
+        <h2>메소드 선언</h2>
+        <ul class="command">
+          <li>def method_name(self, arg1, arg2, ... ) :</li>
+        </ul>
+        <ul class="describe">
+          <li>메소드 선언 명령어는 def이다</li>
+          <li>첫번째 매개변수는 관례적으로 self를 써준다</li>
+        </ul>
+        <ul class="caution">
+          <li>함수가 아닌 메소드 선언시에는 self를 잊지 말자</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>생성자/객체변수 선언</h2>
+        <ul class="command">
+          <li>def __init__(self, arg1, arg2, ...) :</li>
+          <li>self.arg = 123</li>
+        </ul>
+        <ul class="describe">
+          <li>메소드 이름을 __init__으로 해줘야 생성자로 인식을 한다</li>
+          <li>관례적으로 객체변수는 생성자에서 self.변수 = 값 형식으로 선언을 해서 사용한다</li>
+        </ul>
+        <ul class="caution">
+          <li>생성자 이름이 클래스명이 아닌것에 유의할 것</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>정적 클래스 변수 선언</h2>
+        <ul class="command">
+          <li>arg = 123</li>
+          <li>Class_name.arg = 456</li>
+        </ul>
+        <ul class="describe">
+          <li>클래스 내부 최상위 인덴트에 변수를 선언해주면 클래스 변수로 선언된다</li>
+          <li>값을 변경할때는 객체로 접근해서 변경하는게 아닌 클래스로 접근하여 변경해야 한다</li>
+        </ul>
+        <ul class="caution">
+          <li>클래스가 아닌 객체에서 값을 변경하면 정적인 특성을 잃는다는 것에 유의할 것</li>
+        </ul>
+      </article>
+      <article class="code">
+        <h2>오버라이딩</h2>
+        <ul class="command">
+          <li>def parent_method(self, arg1, arg2, ... ) :</li>
+        </ul>
+        <ul class="describe">
+          <li>따로 @override같은거 할 필요 없이 부모클래스의 메소드를 그대로 가져와서 구현만 새로 해주면 된다</li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      copyright©saltwalks2021
+    </footer>
+  </body>
+</html>
